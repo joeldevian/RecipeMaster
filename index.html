@@ -3,33 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RecipeMaster</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>RecipeMaster 🍲</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>RecipeMaster</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Buscar Recetas</a></li>
-                <li><a href="#">Mis Recetas</a></li>
-                <li><a href="#">Compartir Receta</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>RecipeMaster 🍲</h1>
+            <nav>
+                <ul>
+                    <li><a href="#search">Buscar Recetas</a></li>
+                    <li><a href="#favorites">Guardar Recetas</a></li>
+                    <li><a href="#share">Compartir Recetas</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section id="hero">
-            <h2>Descubre Recetas de Todo el Mundo</h2>
-            <p>Busca, guarda y comparte tus recetas favoritas con RecipeMaster.</p>
+        <section id="search" class="hero">
+            <div class="hero-content">
+                <h2>Busca tus recetas favoritas</h2>
+                <input type="text" id="searchInput" placeholder="Buscar recetas...">
+                <button id="searchButton">Buscar</button>
+            </div>
+        </section>
+
+        <section id="favorites" class="section">
+            <h2>Recetas Guardadas</h2>
+            <div id="favoritesList" class="recipe-list">
+                <!-- Lista de recetas guardadas -->
+            </div>
+        </section>
+
+        <section id="share" class="section">
+            <h2>Comparte tus recetas</h2>
+            <form id="shareForm">
+                <input type="text" id="recipeName" placeholder="Nombre de la receta" required>
+                <textarea id="recipeDescription" placeholder="Descripción de la receta" required></textarea>
+                <button type="submit">Compartir</button>
+            </form>
         </section>
     </main>
 
     <footer>
-        <p>RecipeMaster © 2024 - Todos los derechos reservados</p>
+        <p>&copy; 2024 RecipeMaster. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="js/app.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
